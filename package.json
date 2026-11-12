@@ -12,10 +12,13 @@
     "seed:emulator": "node scripts/seed.js --emulator",
     "test:seeds": "firebase emulators:exec --only firestore \"node scripts/seed.js --emulator\"",
     "deploy:firestore": "firebase deploy --only firestore:rules,firestore:indexes",
-    "check": "node scripts/seed.js --check"
+    "check": "node scripts/seed.js --check",
+    "create-admin": "node scripts/create-admin.js",
+    "create-admin:emulator": "node scripts/create-admin.js --emulator"
   },
   "dependencies": {
-    "firebase-admin": "~14.5.0"
+    "firebase-admin": "~14.5.0",
+    "bcryptjs": "~3.0.3"
   },
   "devDependencies": {
     "firebase-tools": "~15.35.0"
